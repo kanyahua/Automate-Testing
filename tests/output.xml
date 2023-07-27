@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230727 09:26:43.454" rpa="false" schemaversion="4">
+<suite id="s1" name="Aboutsu" source="/Users/hua/Desktop/Robot Testing/Homework/tests/aboutsu.robot">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>เปิดบราวเซอร์</arg>
+<arg>AND</arg>
+<arg>เปิดหน้าจอให้เต็ม</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="เปิดบราวเซอร์" library="kw_aboutsu">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230727 09:26:43.509" level="INFO">Opening browser 'chrome' to base url 'https://smartplus-dev.su.ac.th/admin'.</msg>
+<msg timestamp="20230727 09:26:43.511" level="INFO">Executing: /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
+<status status="PASS" starttime="20230727 09:26:43.509" endtime="20230727 09:26:45.441"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:43.509" endtime="20230727 09:26:45.441"/>
+</kw>
+<kw name="เปิดหน้าจอให้เต็ม" library="kw_aboutsu">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230727 09:26:45.441" endtime="20230727 09:26:45.850"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:45.441" endtime="20230727 09:26:45.851"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:43.509" endtime="20230727 09:26:45.851"/>
+</kw>
+<test id="s1-t1" name="เทส" line="12">
+<kw name="กดปุ่ม &quot;Sign in with SSO&quot;" library="kw_aboutsu">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div[2]/div/div/div/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230727 09:26:45.853" level="INFO">Clicking button 'xpath=//*[@id="root"]/div/div[2]/div/div/div/div/div/button'.</msg>
+<status status="PASS" starttime="20230727 09:26:45.852" endtime="20230727 09:26:45.904"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:45.852" endtime="20230727 09:26:45.904"/>
+</kw>
+<kw name="รอจนมีกล่อง &quot;Sign in&quot;" library="kw_aboutsu">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="i0116"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230727 09:26:45.905" endtime="20230727 09:26:47.806"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:45.905" endtime="20230727 09:26:47.806"/>
+</kw>
+<kw name="กดที่ช่องinput สำหรับกรอกอีเมล" library="kw_aboutsu">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="i0116"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230727 09:26:47.807" level="INFO">Clicking element 'xpath=//*[@id="i0116"]'.</msg>
+<status status="PASS" starttime="20230727 09:26:47.806" endtime="20230727 09:26:47.845"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:47.806" endtime="20230727 09:26:47.845"/>
+</kw>
+<kw name="กรอกอีเมล" library="kw_aboutsu">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="i0116"]</arg>
+<arg>pawutinan_s@su.ac.th</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230727 09:26:47.846" level="INFO">Typing text 'pawutinan_s@su.ac.th' into text field 'xpath=//*[@id="i0116"]'.</msg>
+<status status="PASS" starttime="20230727 09:26:47.845" endtime="20230727 09:26:47.946"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:47.845" endtime="20230727 09:26:47.946"/>
+</kw>
+<kw name="กดปุ่ม &quot;ถัดไป&quot;" library="kw_aboutsu">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="idSIButton9"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230727 09:26:47.947" level="INFO">Clicking button 'xpath=//*[@id="idSIButton9"]'.</msg>
+<status status="PASS" starttime="20230727 09:26:47.947" endtime="20230727 09:26:47.976"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:47.947" endtime="20230727 09:26:47.976"/>
+</kw>
+<kw name="รอจนมีกล่อง &quot;Enter Password&quot;" library="kw_aboutsu">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="i0118"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230727 09:26:47.976" endtime="20230727 09:26:49.108"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:47.976" endtime="20230727 09:26:49.109"/>
+</kw>
+<kw name="กดช่องinput สำหรับใส่รหัสผ่าน" library="kw_aboutsu">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="i0118"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230727 09:26:49.110" level="INFO">Clicking element 'xpath=//*[@id="i0118"]'.</msg>
+<status status="PASS" starttime="20230727 09:26:49.109" endtime="20230727 09:26:49.201"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:49.109" endtime="20230727 09:26:49.202"/>
+</kw>
+<kw name="ใส่รหัสผ่าน" library="kw_aboutsu">
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath=//*[@id="i0118"]</arg>
+<arg>S1tt1d3tlm78</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230727 09:26:49.202" level="INFO">Typing password into text field 'xpath=//*[@id="i0118"]'.</msg>
+<msg timestamp="20230727 09:26:49.219" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230727 09:26:49.232" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230727 09:26:49.202" endtime="20230727 09:26:49.232"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:49.202" endtime="20230727 09:26:49.232"/>
+</kw>
+<kw name="กดปุ่ม &quot;ลงชื่อเข้าใช้&quot;" library="kw_aboutsu">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="idSIButton9"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230727 09:26:49.233" level="INFO">Clicking button 'xpath=//*[@id="idSIButton9"]'.</msg>
+<status status="PASS" starttime="20230727 09:26:49.233" endtime="20230727 09:26:49.594"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:49.233" endtime="20230727 09:26:49.594"/>
+</kw>
+<kw name="รอจนเปลี่ยนเป็นหน้า &quot;ลงชื่อเข้าใช้ค้างไว้หรือไม่&quot;" library="kw_aboutsu">
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<arg>https://login.microsoftonline.com/213e491d-43e3-4a8c-ac2d-8a26ed885e0f/login</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20230727 09:26:49.595" endtime="20230727 09:26:49.598"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:49.594" endtime="20230727 09:26:49.598"/>
+</kw>
+<kw name="กดปุ่มเพื่อลงชื่อค้างไว้" library="kw_aboutsu">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="idSIButton9"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230727 09:26:49.599" level="INFO">Clicking button 'xpath=//*[@id="idSIButton9"]'.</msg>
+<status status="PASS" starttime="20230727 09:26:49.599" endtime="20230727 09:26:49.922"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:49.598" endtime="20230727 09:26:49.922"/>
+</kw>
+<kw name="รอจนเปลี่ยนเป็นหน้าเป็นหน้า /home" library="kw_aboutsu">
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<arg>https://smartplus-dev.su.ac.th/admin/home</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20230727 09:26:49.922" endtime="20230727 09:26:50.792"/>
+</kw>
+<status status="PASS" starttime="20230727 09:26:49.922" endtime="20230727 09:26:50.792"/>
+</kw>
+<kw name="เลือกเมนู &quot;News&quot; ฝั่งซ้าย" library="kw_aboutsu">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div/div/section/aside/div/div/div[1]/div[2]/ul/li[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230727 09:26:50.793" level="INFO">Clicking element 'xpath=/html/body/div[1]/div/div/section/aside/div/div/div[1]/div[2]/ul/li[2]'.</msg>
+<msg timestamp="20230727 09:26:50.983" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230727 09:26:50.983" level="FAIL">Element with locator 'xpath=/html/body/div[1]/div/div/section/aside/div/div/div[1]/div[2]/ul/li[2]' not found.</msg>
+<status status="FAIL" starttime="20230727 09:26:50.792" endtime="20230727 09:26:50.985"/>
+</kw>
+<status status="FAIL" starttime="20230727 09:26:50.792" endtime="20230727 09:26:50.986"/>
+</kw>
+<kw name="กดที่ช่อง &quot;Search&quot;" library="kw_aboutsu">
+<status status="NOT RUN" starttime="20230727 09:26:50.986" endtime="20230727 09:26:50.986"/>
+</kw>
+<kw name="พิมพ์คำว่า &quot;สร้าง&quot;" library="kw_aboutsu">
+<status status="NOT RUN" starttime="20230727 09:26:50.986" endtime="20230727 09:26:50.986"/>
+</kw>
+<status status="FAIL" starttime="20230727 09:26:45.851" endtime="20230727 09:26:50.986">Element with locator 'xpath=/html/body/div[1]/div/div/section/aside/div/div/div[1]/div[2]/ul/li[2]' not found.</status>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230727 09:26:50.986" endtime="20230727 09:26:51.060"/>
+</kw>
+<status status="FAIL" starttime="20230727 09:26:43.454" endtime="20230727 09:26:51.060"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Aboutsu">Aboutsu</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
